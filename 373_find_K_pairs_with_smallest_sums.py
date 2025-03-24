@@ -12,4 +12,3 @@ class Solution:
                 heapq.heappush(hq, (n1 + nums2[idx + 1], n1, nums2[idx + 1], idx + 1))
             k -= 1
         return res
-        
