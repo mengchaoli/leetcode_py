@@ -6,7 +6,7 @@ class Solution:
             return 10
         if n == 2:
             return 91
-        
+
         sum = 91
 
         for i in range(3, n + 1):
@@ -15,5 +15,5 @@ class Solution:
                 x = x * (9 - j)
             x = x * 9
             sum = sum + x
-        
+
         return sum

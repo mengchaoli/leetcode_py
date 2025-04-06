@@ -9,9 +9,11 @@ This requires 2 for loops
 3. When handing 2D array question, think about if turning the matrix 90 degree will help the performance. So think about the relationship between M and N.
 
 '''
+
+
 class Solution:
     def maxSumSubmatrix(self, matrix: List[List[int]], k: int) -> int:
-        m = len(matrix) 
+        m = len(matrix)
         n = len(matrix[0])
 
         res = float('-inf')
@@ -21,9 +23,9 @@ class Solution:
                 for l in range(n):
                     dp[l] = dp[l] + matrix[j][l]
                 res = max(res, self.helper(dp, k))
-        
+
         return res
-    
+
     def helper(self, dp, k):
         m = len(dp)
         set = SortedSet()
